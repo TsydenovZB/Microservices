@@ -1,12 +1,19 @@
 # Microservices
 
-This Spring Boot application implements a delivery and payment mechanism using a microservice architecture.
+This Spring Boot application implements a order and payment mechanism using a microservice architecture.
 Spring Cloud technologies were used in the development, such as:
 1. Spring Cloud Eureka
 2. Spring Cloud Gateway
 3. Spring Cloud Hystrix
 
-A h2 database is used to store data
+## Database
+The order service database stores order data such as order name, quantity, price.
+The payment service database stores payment data such as payment status, transaction ID, order ID, amount.
+
+A h2 database is used to store data.
+
+## Structure
+Service registry is Eureka server and the rest of the Eureka services are clients.
 
 API-GateWay
 -----------
